@@ -1,6 +1,11 @@
-# React + Vite
+# Apna Khana Tomato
+## https://github.com/abhijeet-maity/sampleuseless.git
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This Project is created using React and css classes, I have used various react hooks like useState, useContext, useNavigate, CreateContext, useEffect. I have utilized react-router-dom package to handle our routes and bring connectivity. 
+
+This food Website supports many features like Search, Login, and its full dynamic and responsive in all screen sizes.
+
+I have used Vite + React framework for the project.
 
 Currently, two official plugins are available:
 
