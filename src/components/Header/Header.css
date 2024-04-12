@@ -1,0 +1,78 @@
+.Header {
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/public/header_img.png') no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.header-details {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: start;
+    gap: 1.5rem;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+}
+
+.header-details h2 {
+    font-size: max(4.5vw,22px);
+    font-weight: 600;
+    color: white;
+}
+
+.header-details p {
+    font-size: 1.1vw;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.header-details button {
+    font-size: max(1.2vw,14px);
+    font-weight: 500;
+    color: #747474;
+    background-color: white;
+    padding: 1vw 2.3vw;
+    border-radius: 50px;
+    border: none;
+}
+
+@media (max-width: 1050px) {
+    .header-details {
+        max-width: 45%;
+    }
+
+    .header-details h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 850px) {
+    
+    .header-details {
+        max-width: 65%;
+    }
+    .header-details p {
+        display: none;
+    }
+    .header-details button {
+        padding: 2vw 4vw;
+    }
+}
+
+@media (max-width: 650px) {
+    
+    .header-details {
+        max-width: 95%;
+    }
+    .header-details h2 {
+        font-size: 24px;
+    }
+    .header-details button {
+        padding: 1vw 2vw;
+    }
+}
+

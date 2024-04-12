@@ -1,0 +1,36 @@
+.PlaceOrderSection {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 80px;
+}
+.leftSide {
+    width: 100%;
+    max-width: max(30%, 500px);
+}
+.leftSide .info {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.leftSide input {
+    width: 100%;
+    margin-bottom: 13px;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    outline-color: tomato;
+}
+.leftSide .multifields {
+    display: flex;
+    gap: 10px;
+}
+.rightSide {
+    width: 100%;
+    max-width: max(40%, 500px);
+}
+.rightSide .cart-Total button {
+    margin-top: 40px;
+    font-size: 16px;
+}
