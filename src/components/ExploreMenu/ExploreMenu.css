@@ -49,3 +49,11 @@
         font-size: 14px;
     }
 }
+@media (max-width: 400px) {
+    .explore-section h1 {
+        font-size: 20px;
+    }
+    .explore-section p {
+        font-size: 15px;
+    }
+}
