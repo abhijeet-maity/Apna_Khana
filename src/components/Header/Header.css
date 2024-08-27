@@ -1,7 +1,7 @@
 .Header {
     height: 34vw;
     margin: 30px auto;
-    background: url('/public/header_img.png') no-repeat;
+    background: url('/header_img.png') no-repeat;
     background-size: contain;
     position: relative;
 }
@@ -75,4 +75,16 @@
         padding: 1vw 2vw;
     }
 }
-
+@media (max-width: 398px) {
+    
+    .header-details {
+        max-width: 95%;
+    }
+    .header-details h2 {
+        font-size: 18px;
+    }
+    .header-details button {
+        padding: 0.8vw 1.5vw;
+        font-size: 13px;
+    }
+}
