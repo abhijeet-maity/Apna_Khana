@@ -3,7 +3,7 @@ import { food_list } from "../assets/assets";
 
 export const StoreContext = createContext(null)
 
-const StoreContextProvider = (props)=>{
+const StoreContextProvider = ({children})=>{
 
     const[cartItems, setCartItems] = useState({});
 
@@ -42,7 +42,7 @@ const StoreContextProvider = (props)=>{
 
     return (
         <StoreContext.Provider value={contextValue}>
-            {props.children}
+            {children}
         </StoreContext.Provider>
     )
 }

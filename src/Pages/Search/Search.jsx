@@ -13,6 +13,7 @@ const Search = () => {
 
     let searchFoodFunc = (e) => {
         setText(e);
+        console.log(text);
         let matchedData = food_list.filter((element) => {
           return (
             element.name.toLowerCase().includes(e.toLowerCase()) ||
@@ -35,7 +36,7 @@ const Search = () => {
         </div>
 
         {text.length > 0 && search.length === 0 ? (
-        <h2 className="not">We are appologize for not having that</h2>
+        <h2 className="not">We are appologized for not having that</h2>
       ) : (
         <div className="food-display" id="food-display">
           <div className="food_dishes">
