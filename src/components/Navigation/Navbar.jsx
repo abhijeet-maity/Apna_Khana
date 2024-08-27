@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import './Navbar.css';
 import { assets } from '../../assets/assets';
 import { Link } from 'react-router-dom';
@@ -7,7 +7,13 @@ import { StoreContext } from '../../Context/StoreContext';
 const Navbar = ({setShowLogin}) => {
 
   const[link, setLink] = useState("Home");
-  const{totalCartAmount} = useContext(StoreContext)
+  const [menuOpen, setMenuOpen] = useState(false); 
+  const{totalCartAmount} = useContext(StoreContext);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
   <div className='Navbar'>
     <Link to='/'><img className="logo" src={assets.TomatoLogo} alt='img'/></Link>
@@ -26,6 +32,24 @@ const Navbar = ({setShowLogin}) => {
       </div>
       <button onClick={()=>setShowLogin(true)}>Sign in</button>
     </div>
+    <div className='Hamburger-menu' onClick={toggleMenu}>
+        <span className='bar'></span>
+        <span className='bar'></span>
+        <span className='bar'></span>
+        {menuOpen && (
+        <div className='dropdown'>
+          <Link to='/' onClick={()=> {setLink("Home")}}>Home</Link>
+          <Link to='/search'><p>Search food</p></Link>
+          <div className='navbar-search-icon'>
+            <Link to='/cart'>Cart</Link>
+          </div>
+          <a href="#FooterSection" onClick={()=> {setLink("Contact us")}}>Contact us</a>
+          <button className="hammenu-signin-btn" onClick={()=>setShowLogin(true)}>Sign in</button>
+        </div>
+        )}
+    </div>
+    
+
   </div>
   )
 }
