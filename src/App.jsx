@@ -8,7 +8,8 @@ import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
 import { useState } from 'react';
 import Search from './Pages/Search/Search';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   
@@ -21,10 +22,11 @@ function App() {
       <Navbar setShowLogin={setShowLogin} />
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/Cart' element={<Cart/>} />
+        <Route path='/Cart' element={<Cart setShowLogin={setShowLogin}/>} />
         <Route path='/Search' element={<Search/>} />
         <Route path='/PlaceOrder' element={<PlaceOrder/>} />
       </Routes>
+      <ToastContainer />
     </div>
     <Footer/>
     </>
