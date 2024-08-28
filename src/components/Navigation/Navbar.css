@@ -9,6 +9,7 @@
     width: 12rem;
 }
 .Navbar {
+    position: relative;
     display: flex;
     padding: 20px 0px;
     justify-content: space-between;
@@ -23,9 +24,22 @@
 }
 
 .Navbar .navbar-right {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 35px;
+}
+.Navbar .profile {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #01B8D8;
+    color: white;
+    border: none;
+}
+.Navbar .profile:hover{
+    color: #01B8D8;
+    background-color: white;
+    border: 1px solid #01B8D8;
 }
 .Navbar li {
     cursor: pointer;
@@ -67,6 +81,69 @@
     border: none;
     outline-color: tomato;
 }
+.Navbar .profile-dropdown {
+    position: absolute;
+    top: 5em;
+    right: 0;
+    background-color: #01B8D8;
+    color: white;
+    z-index: 999;
+    border-radius: 5px;
+}
+.Navbar .profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+.Navbar .close-profile {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.Navbar .close-profile span {
+    cursor: pointer;
+}
+.Navbar .logout-btn {
+    color: white;
+    border-radius: 5px;
+    padding: 4px;
+    border: 1px solid white;
+}
+.Navbar .logout-btn:hover {
+    background-color: whitesmoke;
+    color: orangered;
+
+}
+
+.Navbar .mobile-profile {
+    display: none;
+    padding: 7px;
+    border-radius: 50%;
+    background-color: #01B8D8;
+    color: white;
+    border: none;
+}
+.Navbar .mobile-profile:hover {
+    color: #01B8D8;
+    background-color: white;
+    border: 1px solid #01B8D8;
+}
+.Navbar .mobile-profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 7em;
+    right: 0;
+    background-color: #01B8D8;
+    color: white;
+    z-index: 999;
+    border-radius: 5px;
+}
+.Navbar .mobile-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 .Hamburger-menu {
     display: none;
     flex-direction: column;
@@ -81,25 +158,39 @@
     transition: all 0.3s ease;
 }
 .Navbar .dropdown {
-    width: 10em;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    padding: 12px;
     border-radius: 4px;
     background-color: #F96B28;
     color: white;
     position: absolute;
-    right: 0.5em;
-    top: 4.8em;
+    right: 0;
+    top: 7em;
     z-index: 999;
 }
+.Navbar .dropdown li {
+    list-style-type: none;
+    padding: 12px;
+    transition: all 0.4s ease-in-out;
+}
+
+.Navbar .dropdown li:hover{
+   background-color: aliceblue;
+   color: orangered;
+}
+
 .Hamburger-menu .hammenu-signin-btn {
     padding: 2px;
     border: none;
     text-align: left;
-    color: white;
+    color: black;
 }
+.Hamburger-menu .hammenu-signin-btn:hover {
+    color: orangered;
+    background-color: transparent;
+}
+
 
 @media (max-width: 1050px) {
     .Navbar .logo {
@@ -144,7 +235,7 @@
 
 
 
-@media (max-width: 780px) {
+@media (max-width: 840px) {
     .Navbar .nav-menu {
         display: none;
     }
@@ -159,7 +250,12 @@
         width: 80px;
         height: 80px;
     }
-    
+    .Navbar .mobile-profile {
+        display: block;
+    }
+    .Navbar .mobile-profile-dropdown {
+        display: block;
+    }
 }
 
 @media (max-width: 400px) {
